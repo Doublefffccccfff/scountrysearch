@@ -8,8 +8,8 @@ const Flag = () => {
 
   const fetchCountries = async () => {
     try {
-      const response = await axios.get('https://xcountries-backend.azurewebsites.net/all');
-      console.log(response.data); 
+      const response = await axios.get('https://countries-search-data-prod-812920491762.asia-south1.run.app/countries');
+      console.log(response.data);
       setCountries(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -20,14 +20,13 @@ const Flag = () => {
     fetchCountries();
   }, []);
 
-  // Filter countries by search term
   const filteredCountries = countries.filter(country =>
     country.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="container mt-4">
-      
+      <h2 className="mb-4 text-center">Country Flags</h2>
 
       <div className="mb-4">
         <input
@@ -39,7 +38,7 @@ const Flag = () => {
         />
       </div>
 
-      <div className="row">
+      <div className="row countryCard">
         {filteredCountries.map((country, index) => (
           <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4" key={index}>
             <div className="card text-center h-100">
