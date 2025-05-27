@@ -31,8 +31,8 @@ const Flag = () => {
   );
 
   return (
-    <div className="container mt-4">
-      <h2 className="mb-4 text-center">🌍 Country Flags</h2>
+    <div className="countryCard container mt-4">
+      
 
       <input
         type="text"
@@ -46,8 +46,6 @@ const Flag = () => {
         <div className="text-center text-muted">Loading countries...</div>
       ) : error ? (
         <div className="text-danger text-center">{error}</div>
-      ) : filteredCountries.length === 0 ? (
-        <div className="text-center text-muted mt-4">No countries found.</div>
       ) : (
         <div className="row">
           {filteredCountries.map((country, index) => (
