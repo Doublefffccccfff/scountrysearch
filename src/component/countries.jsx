@@ -46,6 +46,8 @@ const Flag = () => {
         <div className="text-center text-muted">Loading countries...</div>
       ) : error ? (
         <div className="text-danger text-center">{error}</div>
+      ) : filteredCountries.length === 0 ? (
+        null
       ) : (
         <div className="row">
           {filteredCountries.map((country, index) => (
@@ -64,9 +66,9 @@ const Flag = () => {
                     }}
                   />
                 </div>
-                <div className="card-body p-2">
+                <h2 className="card-body p-2">
                   <p className="card-text fw-bold small mb-0">{country.common}</p>
-                </div>
+                </h2>
               </div>
             </div>
           ))}
