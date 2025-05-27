@@ -49,9 +49,9 @@ const Flag = () => {
       ) : filteredCountries.length === 0 ? (
         null
       ) : (
-        <div className="countryCard row">
+        <div className="row">
           {filteredCountries.map((country, index) => (
-            <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4" key={index}>
+            <div className="countryCard col-6 col-sm-4 col-md-3 col-lg-2 mb-4" key={index}>
               <div className="card text-center h-100 shadow-sm">
                 <div className="d-flex justify-content-center align-items-center" style={{ height: '120px' }}>
                   <img
