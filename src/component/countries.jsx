@@ -31,7 +31,7 @@ const Flag = () => {
   );
 
   return (
-    <div className="countryCard container mt-4">
+    <div className="container mt-4">
       
 
       <input
@@ -49,7 +49,7 @@ const Flag = () => {
       ) : filteredCountries.length === 0 ? (
         null
       ) : (
-        <div className="row">
+        <div className="countryCard row">
           {filteredCountries.map((country, index) => (
             <div className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4" key={index}>
               <div className="card text-center h-100 shadow-sm">
